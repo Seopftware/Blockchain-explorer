@@ -54,7 +54,6 @@ const SLink = styled(Link)`
 `;
 
 const HeaderPresenter = props => {
-    console.log(props);
     return(
         <HeaderContainer>
             <HeaderWrapper>
