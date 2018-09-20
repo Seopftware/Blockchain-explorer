@@ -10,7 +10,7 @@ const AppContainer = styled.div`
 
 const AppPresenter = () => {
     <AppContainer>
-        <BrowserRouter>{/*this isn't working yet*/}</BrowserRouter>
+        <BrowserRouter></BrowserRouter>
     </AppContainer>
 };
 
