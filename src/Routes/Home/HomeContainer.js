@@ -8,7 +8,7 @@ class HomeContainer extends Component{
     }
 }
 
-HomeContainer.PropTypes = {
+HomeContainer.propTypes = {
     blocks: PropTypes.array.isRequired,
     transactions: PropTypes.array.isRequired
 };
