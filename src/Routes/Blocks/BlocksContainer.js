@@ -8,7 +8,8 @@ class BlocksContainer extends Component{
     }
 }
 
-BlocksContainer.PropTypes = {
+BlocksContainer.propTypes = {
     blocks: PropTypes.array.isRequired
 };
+
 export default BlocksContainer;
