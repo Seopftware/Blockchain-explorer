@@ -32,7 +32,7 @@ const AppPresenter = ( { isLoading, transactions, blocks } ) => (
               <Switch>
                 <Route exact path={`/`} render={() => <Home blocks={blocks.slice(0,5)} transactions={transactions.slice(0,5)}/>}/> // redux 없이 props를 component에게 패스하기
                 <Route exact path={`/blocks`} render={() => <Blocks blocks={blocks}/>} />
-                <Route exact path={`/transactions`} render={<Transactions transactions={transactions}/>} />
+                <Route exact path={`/transactions`} render={() => <Transactions transactions={transactions}/>} />
               </Switch>
             </Main>
       )}
