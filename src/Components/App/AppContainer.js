@@ -5,7 +5,8 @@ import axios from "axios";
 import flatten from "lodash.flatten";
 import AppPresenter from "./AppPresenter";
 import typography from "../../typography";
-import { API_URL } from "../../constants";
+import { API_URL, WS_URL } from "../../constants";
+import { parseMessage } from "../../constants";
 
 const baseStyles = () => injectGlobal`
     ${reset};
@@ -21,6 +22,7 @@ class AppContainer extends Component {
   };
   componentDidMount = () => {
     this._getData();
+    this._connectToWs();
   };
   render() {
     baseStyles();
@@ -36,6 +38,13 @@ class AppContainer extends Component {
       transactions: txs,
       isLoading: false
     });
+  };
+  _connectToWs = () => {
+      // WebSocket connection
+      const ws = new WebSocket(WS_URL);
+      ws.addEventListener("message", message => {
+          console.log(message);
+      });
   };
 }
 
